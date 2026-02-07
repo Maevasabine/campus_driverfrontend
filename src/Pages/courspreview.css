@@ -1,0 +1,35 @@
+.preview-section {
+  margin: 70px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.preview-title {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+.preview-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.preview-card {
+  min-width: 240px;
+}
+
+.preview-card video {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #000;
+}
+
+.preview-card p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}

@@ -1,0 +1,108 @@
+/* ===== TITRE ===== */
+.text-xl {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c2c54;
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 24px;
+}
+
+/* ===== FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== INPUTS ===== */
+.border {
+  border: 1px solid #dcdde1;
+}
+
+.p-2 {
+  padding: 14px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 22px;
+}
+
+input {
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input:focus {
+  outline: none;
+  border-color: #5f27cd;
+  box-shadow: 0 0 0 2px rgba(95, 39, 205, 0.15);
+}
+
+/* ===== BOUTON VALIDER ===== */
+.bg-green-600 {
+  background: linear-gradient(135deg, #5f27cd, #341f97);
+}
+
+.text-white {
+  color: white;
+}
+
+.rounded {
+  border-radius: 14px;
+}
+
+button[type="submit"] {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(95, 39, 205, 0.35);
+}
+
+/* ===== BOUTON FERMER ===== */
+.mt-4 {
+  margin-top: 22px;
+}
+
+.text-gray-500 {
+  color: #777;
+}
+
+.underline {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+button.mt-4 {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  align-self: center;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+button.mt-4:hover {
+  color: #000;
+  border-bottom: 1px solid #aaa;
+}

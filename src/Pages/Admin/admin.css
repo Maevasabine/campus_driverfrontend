@@ -1,0 +1,49 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 220px;
+  background: #1c1d1f;
+  color: white;
+  padding: 20px;
+}
+
+.admin-sidebar a {
+  display: block;
+  color: #d1d7dc;
+  margin: 12px 0;
+  text-decoration: none;
+}
+
+.admin-sidebar a:hover {
+  color: white;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  background: #f5f5f5;
+}
+
+.admin-table {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-list li,
+.lesson-row {
+  background: white;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 6px;
+}

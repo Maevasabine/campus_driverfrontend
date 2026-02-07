@@ -1,0 +1,1 @@
+cours(id_cours,titre,description,prof,)

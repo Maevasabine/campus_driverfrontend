@@ -1,0 +1,221 @@
+/* =============================
+   BASE
+============================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f7fa;
+  color: #1c1d1f;
+}
+
+/* =============================
+   HERO (STYLE UDEMY)
+============================= */
+.course-hero {
+  background: #1c1d1f;
+  color: #fff;
+  padding: 70px 8%;
+}
+
+.course-hero-content {
+  max-width: 760px;
+}
+
+.course-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.hero-description {
+  color: #d1d7dc;
+  margin: 18px 0;
+  line-height: 1.6;
+}
+
+.hero-meta {
+  margin-bottom: 25px;
+}
+
+.hero-meta span {
+  margin-right: 12px;
+  font-size: 0.95rem;
+  color: #f3ca8c;
+}
+
+/* =============================
+   BOUTONS
+============================= */
+.btn-primary {
+  background: #5624d0;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #401b9c;
+}
+
+/* =============================
+   CORPS DU COURS
+============================= */
+.course-body {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 45px;
+  padding: 60px 8%;
+}
+
+/* ===== MAIN ===== */
+.course-main h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.course-main p {
+  line-height: 1.7;
+  color: #444;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.learning-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+/* ===== SIDEBAR ===== */
+.course-sidebar {
+  background: #fff;
+  padding: 22px;
+  border-radius: 12px;
+  position: sticky;
+  top: 90px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.course-sidebar img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.course-sidebar h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+/* =============================
+   AUTRES FORMATIONS
+============================= */
+.other-courses-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.other-courses-section h2 {
+  margin-bottom: 30px;
+}
+
+.other-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.other-course-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.other-course-card:hover {
+  transform: translateY(-6px);
+}
+
+.other-course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.other-course-card h3 {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+/* =============================
+   MODAL
+============================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  padding: 32px;
+  border-radius: 16px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =============================
+   ANIMATION
+============================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 900px) {
+  .course-body {
+    grid-template-columns: 1fr;
+  }
+
+  .course-hero {
+    padding: 50px 6%;
+  }
+}

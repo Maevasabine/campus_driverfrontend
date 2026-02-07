@@ -1,0 +1,54 @@
+.course-content {
+  margin: 60px auto;
+  max-width: 900px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.course-content h2 {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.section {
+  border-bottom: 1px solid #eee;
+}
+
+.section-header {
+  width: 100%;
+  background: #f7f9fa;
+  padding: 15px 20px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lesson-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lesson {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.lesson.preview:hover {
+  background: #f1f5f9;
+}
+
+.lesson.locked {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.lock {
+  font-size: 0.9rem;
+}
