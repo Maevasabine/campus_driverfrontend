@@ -16,16 +16,16 @@ export default function CoursDetail() {
   const [previewVideo, setPreviewVideo] = useState(null);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/cours/api/cours/${id}`)
+    fetch(`https://campusdriver-production.up.railway.app/cours/api/cours/${id}`)
       .then((res) => res.json())
       .then((data) => setCours(data));
 
-    fetch("http://127.0.0.1:8000/cours/api/cours")
+    fetch("https://campusdriver-production.up.railway.app/cours/api/cours")
       .then((res) => res.json())
       .then((data) =>
         setautresCours(data.filter((item) => item.id !== parseInt(id)))
       );
-      fetch(`http://127.0.0.1:8000/cours/api/contenu/${id}`)
+      fetch(`https://campusdriver-production.up.railway.app/cours/api/contenu/${id}`)
       .then((res) => res.json())
       .then((data) => setSections(data));
 
@@ -71,7 +71,7 @@ export default function CoursDetail() {
 
         <aside className="course-sidebar">
           <img
-            src={`http://127.0.0.1:8000${cours.image}`}
+            src={`https://campusdriver-production.up.railway.app${cours.image}`}
             alt={cours.titre}
           />
 
@@ -105,7 +105,7 @@ export default function CoursDetail() {
               className="other-course-card"
             >
               <img
-                src={`http://127.0.0.1:8000${item.image}`}
+                src={`https://campusdriver-production.up.railway.app${item.image}`}
                 alt={item.titre}
               />
               <h3>{item.titre}</h3>

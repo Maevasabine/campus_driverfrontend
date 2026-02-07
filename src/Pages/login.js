@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/cours/api/connexion", {
+      const res = await fetch("https://campusdriver-production.up.railway.app/cours/api/connexion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, mot_de_passe: password }),

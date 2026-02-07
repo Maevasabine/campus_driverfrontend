@@ -11,7 +11,7 @@ export default function Accueil() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/cours/api/cours")
+    fetch("https://campusdriver-production.up.railway.app/cours/api/cours")
       .then((response) => response.json())
       .then((data) => {
         setCourses(data);
@@ -54,7 +54,7 @@ export default function Accueil() {
               >
                 <div className="card-image-wrapper">
                   <img
-                    src={`http://127.0.0.1:8000${cours.image}`}
+                    src={`https://campusdriver-production.up.railway.app${cours.image}`}
                     className="card-image"
                     alt={cours.titre}
                   />

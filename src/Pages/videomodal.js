@@ -10,7 +10,7 @@ export default function VideoPreviewModal({ lecon, onClose }) {
         <h3>{lecon.titre}</h3>
 
         <video
-          src={`http://127.0.0.1:8000${lecon.video}`}
+          src={`https://campusdriver-production.up.railway.app${lecon.video}`}
           controls
           autoPlay
           style={{ width: "100%", borderRadius: "8px" }}

@@ -7,7 +7,7 @@ export default function AdminLessons() {
   const [sectionId, setSectionId] = useState("");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/cours/api/sections/")
+    fetch("https://campusdriver-production.up.railway.app/cours/api/sections/")
       .then((res) => res.json())
       .then((data) => setSections(data));
   }, []);
