@@ -21,6 +21,8 @@ export default function Ajoutercours() {
         body: formData,
       }
     );
+    const data = await response.json().catch(() => null);
+    console.log("Réponse backend :", data);
 
     if (response.ok) {
       alert("Cours ajouté avec succès !");
