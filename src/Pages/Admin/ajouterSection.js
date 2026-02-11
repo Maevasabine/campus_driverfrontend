@@ -1,4 +1,4 @@
-export default function AddSection() {
+export default function Ajouter_Section() {
   const [form, setForm] = useState({
     cours: "",
     titre: "",

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function AddCours() {
+export default function Ajouter_cours() {
   const [enseignants, setEnseignants] = useState([]);
 
   useEffect(() => {
