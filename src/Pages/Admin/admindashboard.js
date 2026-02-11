@@ -14,10 +14,11 @@ export default function AdminPage() {
         <h2>Admin Panel</h2>
 
         <ul style={{ listStyle: "none", padding: 0 }}>
-          <li><Link to="/Admin/ajouterEnseignant" style={linkStyle}>Ajouter Enseignant</Link></li>
-          <li><Link to="/Admin/Ajouter_cours" style={linkStyle}>Ajouter Cours</Link></li>
-          <li><Link to="/Admin/ajouterSection" style={linkStyle}>Ajouter Section</Link></li>
-          <li><Link to="/Admin/ajouterLecon" style={linkStyle}>Ajouter Leçon</Link></li>
+          <li><Link to="/ajouterEnseignant/" style={linkStyle}>Ajouter Enseignant</Link></li>
+          <li><Link to="/Ajouter_cours/" style={linkStyle}>Ajouter Cours</Link></li>
+          <li><Link to="/ajouterSection/" style={linkStyle}>Ajouter Section</Link></li>
+          <li><Link to="/ajouterLecon/" style={linkStyle}>Ajouter Leçon</Link></li>
+
 
         </ul>
       </div>
