@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Ajouter_Section() {
+export default function AjouterSection() {
   const [form, setForm] = useState({
     cours: "",
     titre: "",

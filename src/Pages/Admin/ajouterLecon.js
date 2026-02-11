@@ -1,4 +1,4 @@
-export default function Ajouter_Lecon() {
+export default function AjouterLecon() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 

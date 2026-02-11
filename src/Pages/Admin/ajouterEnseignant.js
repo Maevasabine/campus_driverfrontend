@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Ajouter_Enseignant() {
+export default function AjouterEnseignant() {
   const [form, setForm] = useState({
     nom: "",
     email: "",
