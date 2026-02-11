@@ -2,67 +2,57 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [mot_de_passe, setMotDePasse] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const res = await fetch("https://campusdriver-production.up.railway.app/cours/api/connexion", {
+    const response = await fetch(
+      "https://campusdriver-production.up.railway.app/cours/api/connexion",
+      {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, mot_de_passe: password }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Identifiants incorrects");
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, mot_de_passe }),
       }
+    );
 
-      const data = await res.json();
+    const data = await response.json();
 
-      // data = { user: {...}, token: "..." }
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user));
+    if (response.ok) {
+      // On stocke l'utilisateur
+      localStorage.setItem("user", JSON.stringify(data));
 
-      // REDIRECTION PAR ROLE
-      if (data.user.role === "Admin") {
-        navigate("/Pages/Admin");
+      // 🔥 Redirection selon rôle
+      if (data.role === "Admin") {
+        navigate("/admin");
       } else {
-        navigate("/Pages/Utilisateur");
+        navigate("/");
       }
-    } catch (err) {
-      setError(err.message);
+    } else {
+      alert("Email ou mot de passe incorrect");
     }
   };
 
   return (
-    <div className="login-page">
-      <form className="login-box" onSubmit={handleSubmit}>
-        <h2>Connexion</h2>
-
-        {error && <p className="error">{error}</p>}
-
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-
-        <input
-          type="password"
-          placeholder="Mot de passe"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <button type="submit">Se connecter</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <h2>Connexion</h2>
+      <input
+        type="email"
+        placeholder="Email"
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        type="password"
+        placeholder="Mot de passe"
+        onChange={(e) => setMotDePasse(e.target.value)}
+        required
+      />
+      <button type="submit">Se connecter</button>
+    </form>
   );
 }
