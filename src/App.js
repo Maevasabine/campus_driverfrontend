@@ -3,7 +3,8 @@ import Accueil from "./Pages/Accueil";
 import CoursDetail from "./Pages/Coursdetail";
 import InscriptionCours from "./Pages/inscription";
 import Login from "./Pages/login";
-import AdminLayout from "./Pages/Admin/adminlayout";
+import AdminPage from "./Pages/Admin/admindashboard";
+
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
         <Route path="/cours/:id" element={<CoursDetail />} />
         <Route path="/inscription/:id" element={<InscriptionCours />} />
         <Route path="/connexion/" element={<Login />} />
-
-        <Route path="/Pages/Admin" element={<AdminLayout />} />
+        <Route path="/Admin" element={<AdminPage />} />
     
       </Routes>
     </BrowserRouter>
