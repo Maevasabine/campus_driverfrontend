@@ -18,10 +18,10 @@ function App() {
         <Route path="/cours/:id" element={<CoursDetail />} />
         <Route path="/inscription/:id" element={<InscriptionCours />} />
         <Route path="/connexion/" element={<Login />} />
-        <Route path="/ajouter_cours/" element={<Ajouter_cours />} />
-        <Route path="/ajouter_enseignant/" element={<Ajouter_Enseignant />} />
-        <Route path="/ajouter_lecon/" element={<Ajouter_Lecon />} />
-        <Route path="/ajouter_section/" element={<Ajouter_Section />} />
+        <Route path="/Ajouter_cours/" element={<Ajouter_cours />} />
+        <Route path="/ajouterEnseignant/" element={<Ajouter_Enseignant />} />
+        <Route path="/ajouterLecon/" element={<Ajouter_Lecon />} />
+        <Route path="/ajouterSection/" element={<Ajouter_Section />} />
         <Route path="/Admin" element={<AdminPage />} />
     
       </Routes>
