@@ -10,7 +10,7 @@ export default function AjouterSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("https://campusdriver-production.up.railway.app/cours/api/creer_section", {
+    await fetch("https://campusdriver-production.up.railway.app/cours/api/creer_section/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

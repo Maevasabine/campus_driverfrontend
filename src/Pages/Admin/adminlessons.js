@@ -16,7 +16,7 @@ export default function AdminLessons() {
     if (!sectionId) return;
 
     fetch(
-      `http://127.0.0.1:8000/cours/api/lecons/?section=${sectionId}`
+      `http://127.0.0.1:8000/cours/api/lecons/?section=${sectionId}/`
     )
       .then((res) => res.json())
       .then((data) => setLessons(data));

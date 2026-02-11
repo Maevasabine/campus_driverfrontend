@@ -4,7 +4,7 @@ export default function AjouterLecon() {
 
     const formData = new FormData(e.target);
 
-    await fetch("https://campusdriver-production.up.railway.app/cours/api/creer_lessons", {
+    await fetch("https://campusdriver-production.up.railway.app/cours/api/creer_lessons/", {
       method: "POST",
       body: formData,
     });

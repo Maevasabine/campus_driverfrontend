@@ -4,7 +4,7 @@ export default function Ajoutercours() {
   const [enseignants, setEnseignants] = useState([]);
 
   useEffect(() => {
-    fetch("https://campusdriver-production.up.railway.app/cours/api/enseignants")
+    fetch("https://campusdriver-production.up.railway.app/cours/api/enseignants/")
       .then(res => res.json())
       .then(data => setEnseignants(data));
   }, []);
@@ -15,7 +15,7 @@ export default function Ajoutercours() {
     const formData = new FormData(e.target);
 
     const response = await fetch(
-      "https://campusdriver-production.up.railway.app/cours/api/creer_cours",
+      "https://campusdriver-production.up.railway.app/cours/api/creer_cours/",
       {
         method: "POST",
         body: formData,

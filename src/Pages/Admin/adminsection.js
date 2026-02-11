@@ -16,7 +16,7 @@ export default function AdminSections() {
     if (!selectedCourse) return;
 
     fetch(
-      `http://127.0.0.1:8000/cours/api/sections/?cours=${selectedCourse}`
+      `http://127.0.0.1:8000/cours/api/sections/?cours=${selectedCourse}/`
     )
       .then((res) => res.json())
       .then((data) => setSections(data));
