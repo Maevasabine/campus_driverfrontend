@@ -59,7 +59,9 @@ export default function Ajoutercours() {
 
         <div>
           <label>Enseignant</label>
-          <select name="enseignant">
+          <select name="enseignant" 
+          value={form.enseignants}
+          onChange={(e) => setForm({ ...form, enseignants: e.target.value })}>
             <option value="">-- Aucun --</option>
             {enseignants.map((ens) => (
               <option key={ens.id} value={ens.id}>

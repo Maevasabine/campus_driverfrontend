@@ -30,7 +30,9 @@ export default function AjouterSection() {
       <h2>Ajouter Section</h2>
        <div>
           <label>Cours</label>
-          <select name="cours" required>
+          <select name="cours" required
+            value={form.cours}
+            onChange={(e) => setForm({ ...form, cours: e.target.value })}>
             <option value="">-- Aucun --</option>
             {cours.map((cour) => (
               <option key={cour.id} value={cour.id}>

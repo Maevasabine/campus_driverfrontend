@@ -27,7 +27,9 @@ export default function AjouterLecon() {
       <h2>Ajouter Leçon</h2>
      <div>
           <label>Section</label>
-          <select name="section" required>
+          <select name="section" required
+          value={form.section}
+          onChange={(e) => setForm({ ...form, section: e.target.value })}>
             <option value="">-- Aucun --</option>
             {section.map((sect) => (
               <option key={sect.id} value={sect.id}>
