@@ -4,7 +4,7 @@ export default function AjouterSection() {
   const [cours, setCours] = useState([]);
 
   const [form, setForm] = useState({
-    cours_id: "",
+    cours: "",
     titre: "",
     ordre: 0,
   });
@@ -32,8 +32,8 @@ export default function AjouterSection() {
        <div>
           <label>Cours</label>
           <select name="cours" required
-            value={form.cours_id}
-            onChange={(e) => setForm({ ...form, cours_id: parseInt(e.target.value) })}>
+            value={form.cours}
+            onChange={(e) => setForm({ ...form, cours: parseInt(e.target.value) })}>
             <option value="">-- Aucun --</option>
             {cours.map((cour) => (
               <option key={cour.id} value={cour.id}>
