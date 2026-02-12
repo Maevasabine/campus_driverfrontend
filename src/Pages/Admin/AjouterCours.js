@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 
 export default function Ajoutercours() {
   const [enseignants, setEnseignants] = useState([]);
+  const [form, setForm] = useState({
+  enseignant: "",
+   });
+
 
   useEffect(() => {
     fetch("https://campusdriver-production.up.railway.app/cours/api/enseignants/")
@@ -60,8 +64,8 @@ export default function Ajoutercours() {
         <div>
           <label>Enseignant</label>
           <select name="enseignant" 
-          value={form.enseignants}
-          onChange={(e) => setForm({ ...form, enseignants: e.target.value })}>
+          value={form.enseignant}
+          onChange={(e) => setForm({ ...form, enseignants: parseInt(e.target.value) })}>
             <option value="">-- Aucun --</option>
             {enseignants.map((ens) => (
               <option key={ens.id} value={ens.id}>

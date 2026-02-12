@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 export default function AjouterLecon() {
   const [section, setSection] = useState([]);
+  const [form, setForm] = useState({
+  sections: "",
+});
+
 
       useEffect(() => {
       fetch("https://campusdriver-production.up.railway.app/cours/api/section/")
@@ -28,8 +32,8 @@ export default function AjouterLecon() {
      <div>
           <label>Section</label>
           <select name="section" required
-          value={form.section}
-          onChange={(e) => setForm({ ...form, section: e.target.value })}>
+          value={form.sections}
+          onChange={(e) => setForm({ ...form, section: parseInt(e.target.value) })}>
             <option value="">-- Aucun --</option>
             {section.map((sect) => (
               <option key={sect.id} value={sect.id}>

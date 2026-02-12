@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function AjouterSection() {
   const [cours, setCours] = useState([]);
+
   const [form, setForm] = useState({
     cours: "",
     titre: "",
@@ -32,7 +33,7 @@ export default function AjouterSection() {
           <label>Cours</label>
           <select name="cours" required
             value={form.cours}
-            onChange={(e) => setForm({ ...form, cours: e.target.value })}>
+            onChange={(e) => setForm({ ...form, cours: parseInt(e.target.value) })}>
             <option value="">-- Aucun --</option>
             {cours.map((cour) => (
               <option key={cour.id} value={cour.id}>
